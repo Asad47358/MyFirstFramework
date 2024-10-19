@@ -1,0 +1,38 @@
+class 1 live -
+
+create maven project
+give name to group id and artifact id
+
+cucumber starts from -
+firstly, we write test case/scenario
+secondly, generate step definitions
+
+    rules to remember -
+        every step definition should be unique.
+        after generating step def, we cannot add anything in feature file.
+        we can reuse all the steps in feature file, but we cannot add step def in every class.
+
+ Background -
+ till the time flow is same in all the common steps for the scenarios in one feature file.
+
+ Hooks -
+ rule -  it has just 2 tags  - @before @after
+ it will be available always under steps package
+
+Flow of execution - > hooks will be executed then background will be executed and then scenario will be executed.
+
+Data driven testing -> when one test case executes against multiple sets of data hooks, background and scenario will be
+executed based on total sets of data. we implement scenario outline with examples table
+
+Framework -> structure:
+main - for developers
+test - QA automation engineers - to write the code thorough which we test
+  - java - to write all java classes
+  - resources - to write all non-java stuff such as feature files, excel, config files etc.
+to keep all the feature files at on place
+
+utility package - > common methods class - all the methods and webdriver to be used config reader class to read all the
+the properties from config.prop file
+
+
+
